@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: jkutner
+      author: hendisantika
       changes:
         - createTable:
             tableName: record
@@ -18,3 +18,14 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
+  - changeSet:
+      id: insertTableRecord
+      author: hendisantika
+      changes:
+        - sqlFile:
+            dbms: postgresql
+            encoding: utf8
+            path: migration/V1_20200404_Init_Data.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
