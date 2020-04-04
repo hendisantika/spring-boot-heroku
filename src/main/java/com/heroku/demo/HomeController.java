@@ -15,16 +15,17 @@
  */
 package com.heroku.demo;
 
-import javax.validation.Valid;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @RequestMapping("/")
@@ -37,7 +38,7 @@ public class HomeController {
         this.repository = repository;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping
     public String home(ModelMap model) {
         List<Record> records = repository.findAll();
         model.addAttribute("records", records);
@@ -45,7 +46,7 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @PostMapping
     public String insertData(ModelMap model, 
                              @ModelAttribute("insertRecord") @Valid Record record,
                              BindingResult result) {
