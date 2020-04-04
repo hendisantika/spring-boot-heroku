@@ -6,6 +6,12 @@
 3. Run the application: `mvn clean spring-boot:run`.
 4. Open your favorite browser: http://localhost:8080
 
+## Screen shot
+
+Home Page
+
+![Home Page](img/home.png "Home Page")
+
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 This is a small demo application for showing how to run a [Spring Boot](http://projects.spring.io/spring-boot/)
