@@ -52,9 +52,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="record : ${records}">
-                        <td th:text="${record.data}">Some text</td>
-                    </tr>
+                <tr th:each="record : ${records}">
+                    <td th:text="${record.data}">Some text</td>
+                </tr>
                 </tbody>
             </table>
         </div>
@@ -62,6 +62,11 @@
 </div>
 
 <!-- Latest compiled and minified JavaScript -->
+<script
+        crossorigin="anonymous"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
